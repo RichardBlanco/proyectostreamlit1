@@ -61,10 +61,13 @@ fig_bar = px.bar(registros_por_estado, x='Estado', y='Cantidad', title='Cantidad
 # Crear un gráfico de líneas para la diferencia de tiempo (DIFERENCIA) a lo largo del tiempo (FECHA)
 fig_line = px.line(filtered_data, x='FECHA', y='DIFERENCIA', title='Diferencia de Tiempo a lo Largo del Tiempo')
 
+# Crear un gráfico de pastel para la proporción de registros por ESTADO
+fig_pie = px.pie(registros_por_estado, names='Estado', values='Cantidad', title='Proporción de Registros por Estado')
+
 # Mostrar los gráficos
 st.plotly_chart(fig_bar, use_container_width=True)
 st.plotly_chart(fig_line, use_container_width=True)
+st.plotly_chart(fig_pie, use_container_width=True)
 
 # Mostrar la tabla filtrada
 st.write("Datos filtrados", filtered_data)
-
