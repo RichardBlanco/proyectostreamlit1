@@ -5,7 +5,7 @@ import plotly.express as px
 st.title("Control de Rutas")
 
 # Especificar la ruta del archivo CSV
-file_path = '/static/datasets/controlruta.csv'
+file_path = 'static/datasets/controlruta.csv'
 
 # Leer el archivo CSV
 try:
